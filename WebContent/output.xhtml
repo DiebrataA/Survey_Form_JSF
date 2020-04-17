@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">      
+<h:head>
+  <title>Diponegoro University | Student's Survey Form</title>
+  <h:outputStylesheet library="css" name="bootstrap.min.css" />
+  <style>
+    input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(21, 96, 196);
+  color: white;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+  </style>
+</h:head>
+
+<h:body>
+	<div class="container" style="background-color: transparent;">
+        <div class="navbar" style="background-color:rgb(4, 0, 61);">
+            <div class="navbar-brand" style="color: white; background-color: transparent;">Student's Survey Form</div>
+			</div>
+			<div class="row" style="border: 10px;">
+	
+	  <h:form style="margin-left: 25px; margin-top: 20px;">
+		<h4 style="text-align: center;">Student's Survey Form - Confirmation</h4>
+			<table style="border: 1px">
+   
+			<tr>
+				<td>First Name:</td>
+				<td><h:outputText value="#{employeeBean.firstName}" styleClass="form-control" /></td>
+			</tr>
+			<tr>
+				   <td>Last Name:</td>
+				<td><h:outputText value="#{employeeBean.lastName}" styleClass="form-control"/></td>
+			</tr>
+			<tr>
+				 <td>Address:</td>
+				<td><h:outputText value="#{employeeBean.address}" styleClass="form-control" /></td>
+			</tr>
+			<tr>
+				 <td>City:</td>
+				<td><h:outputText value="#{employeeBean.city}" styleClass="form-control"/></td>
+			</tr>
+			<tr>
+				<td>Country:</td>
+				<td><h:outputText value="#{employeeBean.country}" styleClass="form-control" /></td>
+			</tr>
+			<tr>
+				<td>Post Code:</td>
+				<td><h:outputText value="#{employeeBean.postcode}" styleClass="form-control" /></td>
+			</tr>
+			<tr>
+				<td>Phone:</td>
+				<td><h:outputText value="#{employeeBean.mobileNumber}"  styleClass="form-control"/></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><h:outputText value="#{employeeBean.emailAddress}" styleClass="form-control" /></td>
+			</tr>
+			
+			<tr>
+				<td>Date of Survey:</td>
+				<td><h:outputText value="#{employeeBean.datesurvey}" styleClass="form-control" /></td>
+			</tr>
+			<tr>
+				<td>What do you like from an University :</td>
+				<td><h:outputText value="#{employeeBean.interestInString}" styleClass="form-control"/></td>
+			</tr>
+						<tr>
+				<td>Knows about UNDIP from :</td>
+				<td><h:outputText value="#{employeeBean.facility}" styleClass="form-control"/></td>
+			</tr>
+			
+						<tr>
+		  <td>ow Do you recommend us to others :</td>
+				<td><h:outputText value="#{employeeBean.recommendation}" styleClass="form-control"/></td>
+			</tr>
+			
+			
+						<tr>
+				<td>Comments:</td>
+				<td><h:outputText value="#{employeeBean.comment}" styleClass="form-control"/></td>
+			</tr>
+			<tr>
+			</tr>
+		</table>
+	
+    <p>
+  <h:commandButton value="Back" action="input" style="background-color: red;" />
+    <h:commandButton value="Submit" action="success" /></p>
+  </h:form>
+  </div>
+</div>
+</h:body>
+</html>

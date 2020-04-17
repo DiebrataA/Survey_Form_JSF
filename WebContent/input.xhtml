@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">      
+<h:head>
+
+  <title>Diponegoro University | Student's Survey Form</title>
+  <h:outputStylesheet library="css" name="bootstrap.min.css" />
+  <style type="text/css">
+    input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(21, 96, 196);
+  color: white;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</h:head>
+
+<h:body>
+<div class="container" style="background-color: transparent;">
+    <div class="navbar" style="background-color:rgb(4, 0, 61);">
+        <div class="navbar-brand" style="color: white; background-color: transparent;">Student's Survey Form</div>
+        <ul style="overflow: hidden; list-style-type: none;">
+        <li style="color: white;"><a class="active" href="https://diebrataa.github.io/">Home</a></li>
+  <li><a href="input.xhtml">Index</a></li>
+</ul>
+        </div>
+        <div class="row" style="border: 10px;">
+
+  <h:form style="margin-left: 25px; margin-top: 20px;">
+        <table style="border: 1px">
+
+      <tr>
+        <td>First Name</td>
+        <td>
+                <h:inputText label="First Name" 
+                id="FirstName" value="#{employeeBean.firstName}" 
+                       required="true" styleClass="form-control"/>
+		<h:message for="FirstName" style="color: red"/>
+          </td>
+          </tr>
+              
+
+          <tr>
+            <td>Last Name</td>
+            <td>
+                <h:inputText  label="Last Name"
+                id="LastName" value="#{employeeBean.lastName}" 
+                       required="true" styleClass="form-control"/>
+  <h:message for="LastName" style="color: red"/>
+          </td>
+          </tr>  
+          
+     
+          <tr>
+            <td>Address</td>
+            <td>
+                <h:inputText label="Address" 
+                id="address" value="#{employeeBean.address}"
+                       required="true" styleClass="form-control"/>
+ <h:message for="address" style="color: red"/>
+          </td>
+          </tr>
+           
+
+          <tr>
+            <td>City</td>
+            <td>
+                <h:inputText label="City"
+                 id="City" value="#{employeeBean.city}" 
+                       required="true" styleClass="form-control"/>
+            <h:message for="City" style="color: red"/>
+                </td>
+                </tr>
+
+                <tr>
+                  <td>Country</td>
+                  <td>
+                <h:inputText label="Country" 
+                id="country" value="#{employeeBean.country}" 
+                       required="true" styleClass="form-control"/>
+ <h:message for="country" style="color: red"/>
+            </td>
+            </tr>
+                      
+        
+            <tr>
+              <td>Post Code</td>
+              <td>
+                <h:inputText label="PostCode"
+                id="PostCode" type="number" value="#{employeeBean.postcode}" 
+                       required="true" styleClass="form-control"/>
+           <h:message for="PostCode" style="color: red"/>
+                       </td>
+                       </tr>
+                     
+       
+                       <tr>
+                        <td>Phone</td>
+                        <td>             
+                <h:inputText label="Mobile Number"
+                id="MobileNumber" value="#{employeeBean.mobileNumber}" required="true"
+                styleClass="form-control"/>
+<h:message for="MobileNumber" style="color: red"/>
+          </td>
+          </tr>
+          
+       
+          <tr>
+            <td>Email</td>
+            <td>
+            <h:inputText label="Email Address"
+            id="email" value="#{employeeBean.emailAddress}" required="true"
+                       validator="#{employeeBean.validateEmail}" styleClass="form-control"/>
+          <h:message for="email" style="color: red"/>
+          </td>
+          </tr>
+        
+  
+          <tr>
+            <td >Date of Survey</td>
+            <td>
+              <h:inputText 
+              id="datesurvey" value="#{employeeBean.datesurvey}" required="true" styleClass="form-control">
+            <f:convertDateTime pattern="MM-dd-yy" />
+          </h:inputText> (MM-DD-YY)
+            <h:message for="datesurvey" style="color: red"/>
+         </td>
+         </tr>
+         
+         <tr>
+          <td>Interest from an University ?</td>
+          <td>
+      
+        <h:selectManyCheckbox value="#{employeeBean.interest}">
+         	<f:selectItem itemValue="student" itemLabel="Students" />
+   			<f:selectItem itemValue="location" itemLabel="Location" />
+   			<f:selectItem itemValue="university" itemLabel="The Building" />
+   			<f:selectItem itemValue="atmosphere" itemLabel="Atmosphere" />
+   			<f:selectItem itemValue="dorm" itemLabel="Dormitory" />
+   			<f:selectItem itemValue="sports" itemLabel="Sports" />
+       </h:selectManyCheckbox>
+      </td>
+      </tr>
+      
+      <tr>
+        <td>Knows about UNDIP from ?</td>
+        <td>
+          <h:selectOneRadio label="facility" 
+                            id="facility" value="#{employeeBean.facility}" >
+            <f:selectItem itemLabel="Teman" itemValue="Friends" />
+            <f:selectItem itemLabel="Televisi" itemValue="Television" />
+            <f:selectItem itemLabel="Internet" itemValue="Internet" />
+               <f:selectItem itemLabel="Lainnya" itemValue="Others" />
+          </h:selectOneRadio>
+        <h:message for="facility" style="color: red"/>          
+        </td>
+        </tr>
+         
+        <tr>
+          <td>Would you recommend us?</td>
+          <td>
+          <h:selectOneMenu label="recommendation"
+                           value="#{employeeBean.recommendation}" styleClass="form-control">
+                           <f:selectItem itemLabel=" " itemValue=" " />
+            <f:selectItem itemLabel="Definitely!" itemValue="Sangat Mungkin" />
+            <f:selectItem itemLabel="Maybe" itemValue="Mungkin" />
+            <f:selectItem itemLabel="Maybe Not" itemValue="Tidak Mungkin" />
+          </h:selectOneMenu>
+        </td>
+        </tr>
+      
+        <tr>
+          <td>Comments</td>
+          <td>
+   		 <h:inputTextarea style="width: 400px;" value="#{employeeBean.comment}" cols="30" rows="10" styleClass="form-control" />
+    </td>
+    </tr>
+    </table>
+ 
+     <h:commandButton value="Confirm" action="output" />
+
+    </h:form>
+     </div>
+    </div>
+</h:body>
+</html>
+

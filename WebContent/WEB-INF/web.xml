@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	id="WebApp_ID" version="2.5">
+ 
+  <display-name>           &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;          &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;         &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;        &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;       &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;      &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;     &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;    &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;   &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/&gt;  &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;/  &lt;h:message for=&quot;facility&quot; style=&quot;color: red&quot;  &lt;h:message for=&quot;facility&quot; style=&quot;color: red  &lt;h:message for=&quot;facility&quot; style=&quot;color: re  &lt;h:message for=&quot;facility&quot; style=&quot;color: r  &lt;h:message for=&quot;facility&quot; style=&quot;color:   &lt;h:message for=&quot;facility&quot; style=&quot;color:  &lt;h:message for=&quot;facility&quot; style=&quot;color  &lt;h:message for=&quot;facility&quot; style=&quot;colo  &lt;h:message for=&quot;facility&quot; style=&quot;col  &lt;h:message for=&quot;facility&quot; style=&quot;co  &lt;h:message for=&quot;facility&quot; style=&quot;c  &lt;h:message for=&quot;facility&quot; style=&quot;  &lt;h:message for=&quot;facility&quot; style=  &lt;h:message for=&quot;facility&quot; style  &lt;h:message for=&quot;facility&quot; styl  &lt;h:message for=&quot;facility&quot; sty  &lt;h:message for=&quot;facility&quot; st  &lt;h:message for=&quot;facility&quot; s  &lt;h:message for=&quot;facility&quot;   &lt;h:message for=&quot;facility&quot;  &lt;h:message for=&quot;facility  &lt;h:message for=&quot;facilit  &lt;h:message for=&quot;facili  &lt;h:message for=&quot;facil  &lt;h:message for=&quot;faci  &lt;h:message for=&quot;fac  &lt;h:message for=&quot;fa  &lt;h:message for=&quot;f  &lt;h:message for=&quot;  &lt;h:message for=  &lt;h:message for  &lt;h:message fo  &lt;h:message f  &lt;h:message   &lt;h:message  &lt;h:messag  &lt;h:messa  &lt;h:mess  &lt;h:mes  &lt;h:me  &lt;h:m  &lt;h:  &lt;h  &lt;   </display-name>
+ <description>Student Survey Form</description>
+  <!-- Change to "Production" when you are ready to deploy -->
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+ 
+  <!-- Welcome page -->
+  <welcome-file-list>
+    <welcome-file>input.xhtml</welcome-file>
+  </welcome-file-list>
+ 
+  <!-- JSF Faces Servlet Mapping -->
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.faces</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
