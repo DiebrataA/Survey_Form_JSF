@@ -12,4 +12,4 @@ Survey Form made with JSF &amp; Bootstrap
 2. https://diebrataa.github.io/
 
 # URL EC2 Instance/ Application
-http://ec2-54-226-199-242.compute-1.amazonaws.com:8080/Survey_form/
+http://54.198.26.136/
